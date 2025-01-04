@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+  </head>
+  
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Help us improve to our website</p> 
+      </header>
+
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input id="name" type="text" class="data-input" placeholder="Enter your name" required/>
+        </div>
+
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input id="email" type="email" class="data-input" placeholder="Enter your email" required/>
+        </div>
+
+        <div class="form-group">
+          <label id="number-label" for="number">Age <span>(optional)</span></label>
+          <input id="number" type="number" min="15" max="70" class="data-input" placeholder="Age"/>
+        </div>
+
+        <div class="form-group">
+          <legend>What is your daily occupation?</legend>
+          <select id="dropdown" class="data-input">
+            <option value="">Your current occupation</option>
+            <option value="1">Student</option>
+            <option value="2">Full Time Job</option>
+            <option value="3">Part Time Job</option>
+            <option value="4">Prefer not to say</option>
+            <option value="5">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <legend>Is our website helpful for you?</legend>
+          <label for="no"><input name="user-preferences" value="no-not-helping" id="no" type="radio" class="radio-input"/> No, it's not helping</label>
+
+          <label for="not"> <input name="user-preferences" value="not-really" id="not" type="radio" class="radio-input"/> Not really</label>
+
+          <label for="yes"> <input name="user-preferences" value="yes-helpful" id="yes" type="radio" class="radio-input" checked/> Yes, it's helpful</label>
+        </div>
+
+        <div class="form-group">
+          <legend>Which course do you learn in this website?</legend>
+          <label for="web-dev">
+          <input class="check-input" id="web-dev" value="web-development" type="checkbox"/> Web Development</label>
+
+          <label for="soft-dev">
+          <input class="check-input" id="soft-dev" value="software-development" type="checkbox"/> Software Development</label>
+          
+          <label for="cyb-sec">
+          <input class="check-input" id="cyb-sec" value="cyber-security" type="checkbox"/> Cyber Security</label>
+
+          <label for="data-analyst">
+          <input class="check-input" id="data-analyst" value="data-analyst" type="checkbox"/> Data analyst</label>
+
+          <label for="other">
+          <input class="check-input" id="other" value="other-course" type="checkbox"/> Other Course</label>
+        </div>
+
+        <div class="form-group">
+          <label for="comment">Any comments, suggetion, or critics?</label>
+          <textarea id="comment" class="text-input" placeholder="Enter your comment here..."></textarea>
+
+        <button type="submit" id="submit" value="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
